@@ -2,6 +2,8 @@
 
 :root {
   scroll-behavior: smooth;
+  --color-primary: rgb(51, 51, 51);
+  --color-secondary: cornflowerblue;
 }
 
 * {
@@ -31,7 +33,7 @@ ul {
 /*-------------- HEADER -----------------*/
 
 .main-header {
-  background-color: #333333;
+  background-color: var(--color-primary);
 }
 
 .container-top-header {
@@ -63,7 +65,7 @@ ul {
 .my-logo {
   font-size: 1.5rem;
   font-weight: 900;
-  margin-left: 20px;
+  margin-left: 5px;
   user-select: none;
 }
 
@@ -116,10 +118,11 @@ ul {
 /*--------------- INTRO -------------------*/
 
 .container-intro-bg-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("https://midu.dev/images/wallpapers/una-taza-de-javascript.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .container-intro {
@@ -136,6 +139,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 10px;
 }
 
 .name-intro {
@@ -146,7 +150,8 @@ ul {
 .frontend-developer-intro {
   font-size: 2.5rem;
   font-weight: 800;
-  background-image: linear-gradient(to right, cornflowerblue, white);
+  margin: 0 10px;
+  background-image: linear-gradient(to right, var(--color-secondary), white);
   /* -webkit-text-fill-color: transparent; */
   color: transparent;
   -webkit-background-clip: text;
@@ -162,7 +167,7 @@ ul {
 }
 
 .download-cv:hover {
-  background-color: cornflowerblue;
+  background-color: var(--color-secondary);
 }
 
 .img-intro {
@@ -182,27 +187,172 @@ ul {
     -10px 10px 20px rgb(100, 149, 237, 0.8) inset; */
 }
 
-.container-projects,
 .container-aboutme,
 .container-contactme {
-  height: 100vh;
   background-position: center;
   background-size: cover;
-}
-
-.container-projects {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png");
+  background-attachment: fixed;
 }
 
 .container-aboutme {
+  height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://www.azulschool.net/wp-content/uploads/2020/05/HTML-CSS-y-JavaScript-el-est%C3%A1ndar-universal.png");
 }
 
 .container-contactme {
+  height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg");
+}
+
+/*-------------- PROJECTS ----------------*/
+
+.container-projects-bg-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container-projects {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.cards-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+.card-project {
+  background-color: var(--color-primary);
+  width: 320px;
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-project:nth-child(n + 4) {
+  display: none;
+}
+
+.img-card {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.info-card {
+  padding: 10px;
+  height: calc(100% - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+.container-badges {
+  display: flex;
+  column-gap: 10px;
+}
+
+.badge {
+  padding: 0 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.badge-html {
+  background-color: rgb(237, 97, 38);
+}
+
+.badge-css {
+  background-color: rgb(73, 166, 221);
+}
+
+.badge-js {
+  background-color: rgb(246, 226, 0);
+  color: black;
+}
+
+.badge-react {
+  background-color: rgb(110, 217, 251);
+  color: black;
+}
+
+.badge-bootstrap {
+  background-color: rgb(129, 0, 251);
+}
+
+.badge-rtk {
+  background-color: rgb(94, 48, 137);
+}
+
+.name-project {
+  text-align: center;
+}
+
+.buttons-card {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons-card a {
+  padding: 5px 20px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  transition: .3s;
+}
+
+.buttons-card a:hover {
+  transform: scale(1.05);
+  background-color: var(--color-secondary);
+  color: white;
+  border-color: white;
+}
+
+.see-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.see-btn:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: black;
+}
+
+.see-less-btn {
+  display: none;
+}
+
+.see-less-btn-block {
+  display: block;
+}
+
+.see-more-btn-none {
+  display: none;
 }
 
 /* // Dispositivos X-Small (teléfonos verticales, menos de 576px)
@@ -214,6 +364,10 @@ ul {
 
 /* // Dispositivos medianos (tabletas, 768px y más) */
 @media (min-width: 768px) {
+  .my-logo {
+    margin-left: 20px;
+  }
+
   .button-open-menu,
   .button-close-menu {
     display: none;
@@ -251,6 +405,10 @@ ul {
 
   .container-text-social-cv-intro {
     align-items: flex-start;
+  }
+
+  .frontend-developer-intro {
+    margin: 0;
   }
 }
 
