@@ -19,6 +19,7 @@ body {
   background-size: cover;
   background-position: center;
   color: white;
+  letter-spacing: 1px;
 }
 
 a {
@@ -28,6 +29,14 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+input,
+textarea,
+button {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
 }
 
 /*-------------- HEADER -----------------*/
@@ -113,6 +122,7 @@ ul {
 
 .main-footer {
   background-color: #333333;
+  text-align: center;
 }
 
 /*--------------- INTRO -------------------*/
@@ -173,37 +183,19 @@ ul {
 .img-intro {
   width: 300px;
   border-radius: 100%;
-  filter: drop-shadow(10px 10px 15px yellow) drop-shadow(-10px -10px 15px red);
-  /* border: 1px solid white; */
-  /* filter: drop-shadow(16px 16px 9px black); */
-  /* background-image: radial-gradient(rgb(0, 0, 0, .8) 40%, rgb(100, 149, 237, .8)); */
-  /* box-shadow: 10px 10px 20px rgb(100, 149, 237, 0.8),
-    -10px -10px 20px rgb(100, 149, 237, 0.8),
-    10px -10px 20px rgb(100, 149, 237, 0.8),
-    -10px 10px 20px rgb(100, 149, 237, 0.8),
-    10px 10px 20px rgb(100, 149, 237, 0.8) inset,
-    -10px -10px 20px rgb(100, 149, 237, 0.8) inset,
-    10px -10px 20px rgb(100, 149, 237, 0.8) inset,
-    -10px 10px 20px rgb(100, 149, 237, 0.8) inset; */
-}
-
-.container-aboutme,
-.container-contactme {
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: radial-gradient(
+    rgb(0, 0, 0, 0.8) 40%,
+    rgb(100, 149, 237, 0.8)
+  );
 }
 
 .container-aboutme {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://www.azulschool.net/wp-content/uploads/2020/05/HTML-CSS-y-JavaScript-el-est%C3%A1ndar-universal.png");
-}
-
-.container-contactme {
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /*-------------- PROJECTS ----------------*/
@@ -217,13 +209,20 @@ ul {
 }
 
 .container-projects {
-  min-height: 100vh;
   max-width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
+  padding: 20px;
+}
+
+.title-section {
+  font-weight: 900;
+  background-image: linear-gradient(to right, var(--color-secondary), white);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .cards-projects {
@@ -315,7 +314,7 @@ ul {
   border: 1px solid black;
   background-color: white;
   color: black;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .buttons-card a:hover {
@@ -334,7 +333,7 @@ ul {
   color: white;
   font-weight: 500;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .see-btn:hover {
@@ -353,6 +352,70 @@ ul {
 
 .see-more-btn-none {
   display: none;
+}
+
+/*---------------- Contact Me ---------------------*/
+
+.container-contactme {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+#my-form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 10px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  background-color: rgb(239, 239, 239, 0.3);
+  max-width: 700px;
+  box-shadow: inset 0 0 100px silver;
+  background-image: url("https://raw.githubusercontent.com/mdn/learning-area/main/css/styling-boxes/styling-tables/noise.png");
+}
+
+#my-form label {
+  display: block;
+  padding-left: 7.5px;
+}
+
+#my-form input,
+#my-form textarea {
+  width: 100%;
+  padding: 5px 7.5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  opacity: 0.85;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgb(0, 0, 0);
+  background-color: rgb(239, 239, 239);
+}
+
+#my-form input {
+  height: 2.25rem;
+}
+
+#my-form textarea {
+  resize: none;
+}
+
+#my-form button {
+  align-self: center;
+  padding: 5px 30px;
+  cursor: pointer;
 }
 
 /* // Dispositivos X-Small (teléfonos verticales, menos de 576px)
