@@ -32,8 +32,7 @@ ul {
 }
 
 input,
-textarea,
-button {
+textarea {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
@@ -91,6 +90,11 @@ button {
   cursor: pointer;
   border: none;
   margin-right: 5px;
+}
+
+.button-open-menu img,
+.button-close-menu img {
+  vertical-align: middle;
 }
 
 .button-close-menu {
@@ -161,6 +165,7 @@ button {
   font-size: 2.5rem;
   font-weight: 800;
   margin: 0 10px;
+  text-align: center;
   background-image: linear-gradient(to right, var(--color-secondary), white);
   /* -webkit-text-fill-color: transparent; */
   color: transparent;
@@ -367,11 +372,11 @@ button {
   align-items: center;
   justify-content: space-evenly;
   row-gap: 20px;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 #my-form {
-  width: 90%;
+  width: 97.5%;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -416,6 +421,9 @@ textarea:focus {
   align-self: center;
   padding: 5px 30px;
   cursor: pointer;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
 }
 
 /* // Dispositivos X-Small (teléfonos verticales, menos de 576px)
