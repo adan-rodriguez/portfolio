@@ -20,22 +20,28 @@ const cardsProjectsHidden = document.querySelectorAll(
   ".card-project:nth-child(n + 4)"
 );
 const buttonSeeLess = document.querySelector(".see-less-btn");
+const containerProjects = document.querySelector(".container-projects-bg-image");
 
 const showCardsProjects = () => {
   cardsProjectsHidden.forEach((card) => (card.style.display = "block"));
 };
 const hiddenCardsProjects = () => {
   cardsProjectsHidden.forEach((card) => (card.style.display = "none"));
+  scroll({
+    top: innerHeight,
+    behavior: 'smooth'
+  });
 };
-const toggleClassButtonsSeeMoreLess = () => {
+const togglesHandles = () => {
   buttonSeeMore.classList.toggle("see-more-btn-none");
   buttonSeeLess.classList.toggle("see-less-btn-block");
+  containerProjects.classList.toggle("container-projects-bg-image-height");
 };
 
 buttonSeeMore.addEventListener("click", showCardsProjects);
-buttonSeeMore.addEventListener("click", toggleClassButtonsSeeMoreLess);
+buttonSeeMore.addEventListener("click", togglesHandles);
 buttonSeeLess.addEventListener("click", hiddenCardsProjects);
-buttonSeeLess.addEventListener("click", toggleClassButtonsSeeMoreLess);
+buttonSeeLess.addEventListener("click", togglesHandles);
 
 /*-------------------------------------------*/
 
