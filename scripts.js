@@ -12,6 +12,21 @@ buttonCloseMenu.addEventListener("click", toggleClassMenu);
 linksNav.forEach((linkNav) =>
   linkNav.addEventListener("click", toggleClassMenu)
 );
+buttonOpenMenu.addEventListener(
+  "click",
+  () => (document.body.style.overflow = "hidden")
+);
+buttonCloseMenu.addEventListener(
+  "click",
+  () => (document.body.style.overflow = "")
+);
+
+addEventListener(
+  "resize",
+  () =>
+    document.documentElement.clientWidth >= 768 &&
+    (document.body.style.overflow = "")
+);
 
 /*-----------------------------------------*/
 
@@ -19,17 +34,22 @@ const buttonSeeMore = document.querySelector(".see-more-btn");
 const cardsProjectsHidden = document.querySelectorAll(
   ".card-project:nth-child(n + 4)"
 );
+const cardProjectFour = document.querySelector(".card-project:nth-child(4)");
 const buttonSeeLess = document.querySelector(".see-less-btn");
-const containerProjects = document.querySelector(".container-projects-bg-image");
+const containerProjects = document.querySelector(
+  ".container-projects-bg-image"
+);
 
 const showCardsProjects = () => {
   cardsProjectsHidden.forEach((card) => (card.style.display = "block"));
+  cardProjectFour.scrollIntoView({
+    behavior: "smooth",
+  });
 };
 const hiddenCardsProjects = () => {
   cardsProjectsHidden.forEach((card) => (card.style.display = "none"));
-  scroll({
-    top: innerHeight,
-    behavior: 'smooth'
+  containerProjects.scrollIntoView({
+    behavior: "smooth",
   });
 };
 const togglesHandles = () => {
