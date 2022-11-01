@@ -12,6 +12,7 @@ buttonCloseMenu.addEventListener("click", toggleClassMenu);
 linksNav.forEach((linkNav) =>
   linkNav.addEventListener("click", toggleClassMenu)
 );
+
 buttonOpenMenu.addEventListener(
   "click",
   () => (document.body.style.overflow = "hidden")
@@ -19,6 +20,9 @@ buttonOpenMenu.addEventListener(
 buttonCloseMenu.addEventListener(
   "click",
   () => (document.body.style.overflow = "")
+);
+linksNav.forEach((linkNav) =>
+  linkNav.addEventListener("click", () => (document.body.style.overflow = ""))
 );
 
 addEventListener(
