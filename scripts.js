@@ -45,7 +45,7 @@ const containerProjects = document.querySelector(
 );
 
 const showCardsProjects = () => {
-  cardsProjectsHidden.forEach((card) => (card.style.display = "block"));
+  cardsProjectsHidden.forEach((card) => (card.style.display = "flex"));
   cardProjectFour.scrollIntoView({
     behavior: "smooth",
   });
