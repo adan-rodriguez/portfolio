@@ -15,7 +15,6 @@
 body {
   font-family: "Poppins", sans-serif;
   min-width: 320px;
-  /* background-image: url("https://media.istockphoto.com/photos/studio-photography-black-picture-id1094453686?b=1&k=20&m=1094453686&s=170667a&w=0&h=oYT6Gi5J0cVZRSWjRWyj__IQcsMhxniIMjbPDBJTOHM="); */
   background-size: cover;
   background-position: center;
   color: white;
@@ -133,20 +132,21 @@ textarea {
 
 .container-intro-bg-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://midu.dev/images/wallpapers/una-taza-de-javascript.png");
+    url(assets/images/una-taza-de-javascript.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .container-intro {
-  height: calc(100vh - 51px);
+  min-height: calc(100vh - 51px);
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 10px;
   align-items: center;
 }
 
@@ -165,8 +165,8 @@ textarea {
 .frontend-developer-intro {
   font-size: 2.5rem;
   font-weight: 800;
-  margin: 0 10px;
   text-align: center;
+  margin: 0 10px;
   background-image: linear-gradient(to right, var(--color-secondary), white);
   /* -webkit-text-fill-color: transparent; */
   color: transparent;
@@ -195,23 +195,24 @@ textarea {
   );
 }
 
-.container-aboutme {
-  height: 100vh;
+/* .container-aboutme {
+  min-height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://www.azulschool.net/wp-content/uploads/2020/05/HTML-CSS-y-JavaScript-el-est%C3%A1ndar-universal.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
+} */
 
 /*-------------- PROJECTS ----------------*/
 
 .container-projects-bg-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png");
+    url(assets/images/react-galaxia.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .container-projects {
@@ -364,7 +365,7 @@ textarea {
 
 .container-contactme {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://images.alphacoders.com/121/thumb-1920-1218911.jpg");
+    url(assets/images/bg-contactme.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -373,7 +374,7 @@ textarea {
   align-items: center;
   justify-content: space-evenly;
   padding: 20px 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #my-form {
@@ -481,6 +482,7 @@ textarea:focus {
 
   .frontend-developer-intro {
     margin: 0;
+    text-align: start;
   }
 }
 
@@ -494,21 +496,4 @@ textarea:focus {
 
 /* // Dispositivos XX-Large (escritorios más grandes, 1400px y más) */
 @media (min-width: 1400px) {
-}
-
-@media (min-width: 1077px) {
-  .container-projects-bg-image-height {
-    height: 100vh;
-  }
-
-  .container-projects {
-    height: 100%;
-    justify-content: space-between;
-  }
-}
-
-@media (max-height: 600px) and (orientation: landscape) {
-  .container-intro, .container-projects-bg-image-height, .container-contactme {
-    height: auto;
-  }
 }

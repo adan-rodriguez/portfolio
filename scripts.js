@@ -59,7 +59,6 @@ const hiddenCardsProjects = () => {
 const togglesHandles = () => {
   buttonSeeMore.classList.toggle("see-more-btn-none");
   buttonSeeLess.classList.toggle("see-less-btn-block");
-  containerProjects.classList.toggle("container-projects-bg-image-height");
 };
 
 buttonSeeMore.addEventListener("click", showCardsProjects);
