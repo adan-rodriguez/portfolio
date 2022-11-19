@@ -307,6 +307,11 @@ textarea {
   background-color: rgb(94, 48, 137);
 }
 
+.badge-firebase {
+  background-color: rgb(241, 132, 17);
+  color: black;
+}
+
 .name-project {
   text-align: center;
 }
