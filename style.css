@@ -73,7 +73,7 @@ textarea {
   font-size: 1.5rem;
   font-weight: 900;
   margin-left: 5px;
-  user-select: none;
+  cursor: default;
 }
 
 .container-closebutton-and-menu ul {
