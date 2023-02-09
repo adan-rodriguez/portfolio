@@ -312,6 +312,10 @@ textarea {
   color: black;
 }
 
+.badge-next {
+  background-color: black;
+}
+
 .name-project {
   text-align: center;
 }
