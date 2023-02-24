@@ -340,6 +340,10 @@ textarea {
   border-color: white;
 }
 
+.private-repo {
+  visibility: hidden;
+}
+
 .see-btn {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
