@@ -316,6 +316,11 @@ textarea {
   background-color: black;
 }
 
+.badge-tailwind {
+  background-color: rgb(56, 189, 248);
+  color: black;
+}
+
 .name-project {
   text-align: center;
 }
