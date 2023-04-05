@@ -21,6 +21,22 @@ body {
   letter-spacing: 1px;
 }
 
+body {
+  animation: animation-body 1s linear;
+}
+
+@keyframes animation-body {
+  0% {
+    filter: blur(10px) brightness(0);
+  }
+  50% {
+    filter: blur(5px) brightness(50%);
+  }
+  100% {
+    filter: blur(0) brightness(100%);
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -178,9 +194,35 @@ textarea {
   /* background-clip: text; */
 }
 
+.container-skills {
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+  display: flex;
+  padding: 10px 0;
+}
+
 .container-skills img {
   width: 50px;
   aspect-ratio: 3/2;
+  animation: animation-skills 1.5s linear infinite;
+}
+
+@keyframes animation-skills {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .download-cv {
@@ -202,6 +244,48 @@ textarea {
     rgb(0, 0, 0, 0.8) 40%,
     rgb(100, 149, 237, 0.8)
   );
+}
+
+.img-intro {
+  animation: animation-mi-imagen 4s linear infinite;
+}
+
+@keyframes animation-mi-imagen {
+  0% {
+    transform: translateX(-10px) translateY(0px);
+  }
+  25% {
+    transform: translateX(0px) translateY(10px);
+  }
+  50% {
+    transform: translateX(10px) translateY(0px);
+  }
+  75% {
+    transform: translateX(0px) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-10px) translateY(0px);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes animation-mi-imagen {
+    0% {
+      transform: translateX(-20px) translateY(0px);
+    }
+    25% {
+      transform: translateX(-10px) translateY(10px);
+    }
+    50% {
+      transform: translateX(0px) translateY(0px);
+    }
+    75% {
+      transform: translateX(-10px) translateY(-10px);
+    }
+    100% {
+      transform: translateX(-20px) translateY(0px);
+    }
+  }
 }
 
 /* .container-aboutme {
@@ -516,46 +600,4 @@ textarea:focus {
 
 /* // Dispositivos XX-Large (escritorios más grandes, 1400px y más) */
 @media (min-width: 1400px) {
-}
-
-.img-intro {
-  animation: mover-forma-rombo 4s linear infinite; /* duración, función de tiempo y repetición de la animación */
-}
-
-@keyframes mover-forma-rombo {
-  0% {
-    transform: translateX(-10px) translateY(0px);
-  }
-  25% {
-    transform: translateX(0px) translateY(10px);
-  }
-  50% {
-    transform: translateX(10px) translateY(0px);
-  }
-  75% {
-    transform: translateX(0px) translateY(-10px);
-  }
-  100% {
-    transform: translateX(-10px) translateY(0px);
-  }
-}
-
-@media (min-width: 768px) {
-  @keyframes mover-forma-rombo {
-    0% {
-      transform: translateX(-20px) translateY(0px);
-    }
-    25% {
-      transform: translateX(-10px) translateY(10px);
-    }
-    50% {
-      transform: translateX(0px) translateY(0px);
-    }
-    75% {
-      transform: translateX(-10px) translateY(-10px);
-    }
-    100% {
-      transform: translateX(-20px) translateY(0px);
-    }
-  }
 }
