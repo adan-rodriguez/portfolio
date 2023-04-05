@@ -601,3 +601,14 @@ textarea:focus {
 /* // Dispositivos XX-Large (escritorios más grandes, 1400px y más) */
 @media (min-width: 1400px) {
 }
+
+.animation-scroll-elem {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.animation-scroll-elem-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
