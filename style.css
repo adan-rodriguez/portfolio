@@ -484,13 +484,13 @@ textarea {
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
-  justify-content: space-evenly;
   padding: 20px 10px;
   min-height: 100vh;
 }
 
 #my-form {
   width: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -501,6 +501,12 @@ textarea {
   max-width: 700px;
   box-shadow: inset 0 0 100px silver;
   background-image: url("https://raw.githubusercontent.com/mdn/learning-area/main/css/styling-boxes/styling-tables/noise.png");
+}
+
+.container-textarea {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 #my-form label {
@@ -529,6 +535,8 @@ textarea {
 
 #my-form textarea {
   resize: none;
+  flex-grow: 1;
+  min-height: 150px;
 }
 
 #my-form button {
