@@ -1,12 +1,19 @@
 export default function animationScroll() {
-  window.addEventListener("scroll", () => {
-    const elements = document.getElementsByClassName("animation-scroll-elem");
-    const screenSize = window.innerHeight;
+  const elements = document.getElementsByClassName("animation-scroll-elem");
 
+  for (let i = 0; i < elements.length; i += 1) {
+    const element = elements[i];
+
+    if (element.getBoundingClientRect().top < window.innerHeight) {
+      element.classList.add("animation-scroll-elem-visible");
+    }
+  }
+
+  window.addEventListener("scroll", () => {
     for (let i = 0; i < elements.length; i += 1) {
       const element = elements[i];
 
-      if (element.getBoundingClientRect().top < screenSize) {
+      if (element.getBoundingClientRect().top < window.innerHeight) {
         element.classList.add("animation-scroll-elem-visible");
       } else {
         element.classList.remove("animation-scroll-elem-visible");
