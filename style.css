@@ -132,10 +132,6 @@ textarea {
   display: flex;
 }
 
-.link-nav:hover {
-  display: table;
-}
-
 .link-nav::after {
   content: "";
   display: block;
@@ -585,10 +581,6 @@ textarea {
     column-gap: 20px;
     position: static;
     width: auto;
-  }
-
-  .container-closebutton-and-menu a {
-    display: flex;
   }
 
   .container-closebutton-and-menu ul {
