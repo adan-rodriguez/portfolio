@@ -392,6 +392,12 @@ textarea {
   background-image: linear-gradient(to top, black, var(--color-primary));
 }
 
+.header-info-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 .container-badges {
   display: flex;
   column-gap: 10px;
@@ -442,10 +448,6 @@ textarea {
 .badge-tailwind {
   background-color: rgb(56, 189, 248);
   color: black;
-}
-
-.name-project {
-  text-align: center;
 }
 
 .description-project {
