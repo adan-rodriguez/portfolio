@@ -205,12 +205,18 @@ textarea {
   font-size: 2.5rem;
   font-weight: 800;
   text-align: center;
-  margin: 0 10px;
   background-image: linear-gradient(to right, var(--color-secondary), white);
   /* -webkit-text-fill-color: transparent; */
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.info-intro {
+  font-size: 12px;
+  opacity: 0.8;
+  max-width: 409px;
+  text-align: center;
 }
 
 .container-skills {
@@ -360,6 +366,11 @@ textarea {
   flex-direction: column;
 }
 
+.card-project:hover {
+  filter: brightness(1.25);
+  border-color: white;
+}
+
 .card-project:nth-child(n + 4) {
   display: none;
 }
@@ -435,6 +446,11 @@ textarea {
 
 .name-project {
   text-align: center;
+}
+
+.description-project {
+  font-size: 12px;
+  opacity: 0.8;
 }
 
 .buttons-card {
@@ -602,7 +618,10 @@ textarea {
   }
 
   .frontend-developer-intro {
-    margin: 0;
+    text-align: start;
+  }
+
+  .info-intro {
     text-align: start;
   }
 }
