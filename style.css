@@ -367,8 +367,12 @@ textarea {
 }
 
 .card-project:hover {
-  filter: brightness(1.25);
   border-color: white;
+  transform: translateY(-5px);
+}
+
+.cards-projects:has(.card-project:hover) > .card-project:not(:hover) {
+  filter: brightness(0.45);
 }
 
 .card-project:nth-child(n + 4) {
@@ -464,7 +468,7 @@ textarea {
   padding: 5px 20px;
   background-color: rgb(255, 255, 255);
   color: var(--color-primary);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .buttons-card a:hover {
