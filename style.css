@@ -277,11 +277,32 @@ textarea {
   padding: 10px 30px;
   border-radius: 1rem;
   transition: 0.3s;
+  /* height: 25px;
+  box-sizing: content-box;
+  display: flex; */
 }
 
 .download-cv:hover {
   filter: contrast(1.15);
 }
+
+/* .download-cv::after {
+  content: url(assets/images/download.svg);
+  margin-left: 5px;
+  animation: animation-download 1s linear infinite;
+}
+
+@keyframes animation-download {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+} */
 
 .img-intro {
   width: 300px;
@@ -426,7 +447,8 @@ textarea {
 
 .container-badges {
   display: flex;
-  column-gap: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .badge {
@@ -452,6 +474,7 @@ textarea {
 .badge-react {
   background-color: rgb(110, 217, 251);
   color: black;
+  order: 1;
 }
 
 .badge-bootstrap {
@@ -474,6 +497,11 @@ textarea {
 .badge-tailwind {
   background-color: rgb(56, 189, 248);
   color: black;
+}
+
+.badge-cloudinary {
+  background-color: #3448c5;
+  color: white;
 }
 
 .description-project {
