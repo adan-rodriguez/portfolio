@@ -474,7 +474,6 @@ textarea {
 .badge-react {
   background-color: rgb(110, 217, 251);
   color: black;
-  order: 1;
 }
 
 .badge-bootstrap {
